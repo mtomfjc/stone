@@ -14,7 +14,7 @@ public class Lexer {
 	private boolean hasMore;
 	private LineNumberReader reader;
 	
-	public Lexer(Reader r){
+	public Lexer(Reader r){ 
 		hasMore = true;
 		reader = new LineNumberReader(r);
 	}
