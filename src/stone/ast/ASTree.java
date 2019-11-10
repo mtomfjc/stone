@@ -1,13 +1,12 @@
 package stone.ast;
+import java.util.Iterator;
 
-public class ASTree {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+public abstract class ASTree implements Iterable<ASTree>{
+	public abstract ASTree child(int i);
+	public abstract int numChildren();
+	public abstract Iterator<ASTree> children();
+	public abstract String location();
+	public Iterator<ASTree> iterator(){
+		return children();
 	}
-
 }
