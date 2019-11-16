@@ -22,9 +22,10 @@ public class BasicParser {
 			.sep("}");
 	Parser simple = rule(PrimaryExpr.class).ast(expr);
 	Parser statement = statement0.or(
-			rule(IfStmnt.class).sep("if)").ast(expr).ast(block)
+			rule(IfStmnt.class).sep("if").ast(expr).ast(block)
 				.option(rule().sep("else").ast(block)),
-			rule(WhileStmnt.class).sep("while").ast(expr).ast(block));
+			rule(WhileStmnt.class).sep("while").ast(expr).ast(block),
+			simple);
 	Parser program = rule().or(statement, rule(NullStmnt.class)).sep(";", Token.EOL);
 	
 	public BasicParser() {
