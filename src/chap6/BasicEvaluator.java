@@ -5,7 +5,7 @@ import stone.StoneException;
 import stone.ast.*;
 import java.util.List;
 
-public class BasicEvaluator {
+@Reviser public class BasicEvaluator {
 	public static final int TRUE = 1;
 	public static final int FALSE = 0;
 	
