@@ -101,7 +101,7 @@ import java.util.List;
 			}
 		}
 		
-		public Object computeAssign(Environment env, Object rvalue){
+		protected Object computeAssign(Environment env, Object rvalue){
 			ASTree l = left();
 			if(l instanceof Name){
 				env.put(((Name)l).name(), rvalue);
